@@ -55,6 +55,9 @@ void visita(vector<vector<int>>matriz ,vector<bool>&visitados, int vertice, vect
 void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida, int vertices) {
 
 	stack<int> pilha;
+	int maximo = visitados.size();
+
+	system("cls");
 
 	while (true) {
 		if (!visitados[vertice_partida]) {
@@ -64,12 +67,20 @@ void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida,
 			pilha.push(vertice_partida);
 		}
 
+		bool vertice_valido = false;
 		bool encontrado = false;
-		int i;
+		int iterador = 0;
 
-		for (i = 0; i < vertices; i++) {
 
-			if (!visitados[i]) {
+		for (iterador = 0; iterador < maximo; iterador++) {
+
+			if (matriz[vertice_partida].at(iterador) == 1) {
+
+				vertice_valido = true;
+
+			}
+
+			if (!visitados[iterador] && vertice_valido) {
 				encontrado = true;
 				break;
 			}
@@ -78,7 +89,7 @@ void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida,
 
 		if (encontrado) {
 
-			vertice_partida = i;
+			vertice_partida = iterador;
 		}
 		else {
 			pilha.pop();
