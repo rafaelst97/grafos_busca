@@ -36,22 +36,6 @@ void adicionar_aresta(vector<vector<int>> &matriz, int vertice1, int vertice2) {
 
 }
 
-void visita(vector<vector<int>>matriz ,vector<bool>&visitados, int vertice, vector<int>&resultado) {
-
-	if (visitados[vertice] == false) {
-		resultado.push_back(vertice);
-	}
-	visitados[vertice] = true;
-	cout << vertice+1 << ", " << endl;
-
-	for (auto i = matriz[vertice].begin(); i < matriz[vertice].end(); i++) {
-		
-		if (!visitados[*i]) {
-			visita(matriz, visitados, *i, resultado);
-		}
-	}
-}
-
 void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida, int vertices) {
 
 	stack<int> pilha;
@@ -105,4 +89,50 @@ void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida,
 	}
 	
 	system("pause");
+
+	fill(visitados.begin(), visitados.end(), false);
+}
+
+void bfs(vector<vector<int>>matriz, vector<bool>& visitados, int vertice_partida, int vertices) {
+
+	system("cls");
+
+	queue<int> fila;
+	int maximo = visitados.size();
+
+	for (int i = 0; i < vertice_partida; i++) {
+		visitados[i] = false;
+	}
+
+	cout << vertice_partida << ", ";
+
+	visitados[vertice_partida] = true;
+
+	while (true) {
+
+		int iterador = 0;
+
+		for (iterador = 0; iterador < maximo; i++) {
+
+			if (!visitados[iterador]) {
+				cout << iterador << ", ";
+				visitados[iterador] = true;
+				fila.push(iterador);
+			}
+		}
+
+		if (!fila.empty()) {
+
+			vertice_partida = fila.front();
+			fila.pop();
+
+		}
+		else
+
+			break;
+	}
+
+	system("pause");
+
+	fill(visitados.begin(), visitados.end(), false);
 }
