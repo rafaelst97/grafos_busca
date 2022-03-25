@@ -36,7 +36,7 @@ void adicionar_aresta(vector<vector<int>> &matriz, int vertice1, int vertice2) {
 
 }
 
-void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida, int vertices) {
+void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida) {
 
 	stack<int> pilha;
 	int maximo = visitados.size();
@@ -93,7 +93,7 @@ void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida,
 	fill(visitados.begin(), visitados.end(), false);
 }
 
-void bfs(vector<vector<int>>matriz, vector<bool>& visitados, int vertice_partida, int vertices) {
+void bfs(vector<vector<int>>matriz, vector<bool>& visitados, int vertice_partida) {
 
 	system("cls");
 
@@ -104,18 +104,25 @@ void bfs(vector<vector<int>>matriz, vector<bool>& visitados, int vertice_partida
 		visitados[i] = false;
 	}
 
-	cout << vertice_partida << ", ";
+	cout << vertice_partida+1 << ", ";
 
 	visitados[vertice_partida] = true;
 
 	while (true) {
 
 		int iterador = 0;
+		bool vertice_valido = false;
 
-		for (iterador = 0; iterador < maximo; i++) {
+		for (iterador = 0; iterador < maximo; iterador++) {
 
-			if (!visitados[iterador]) {
-				cout << iterador << ", ";
+			if (matriz[vertice_partida].at(iterador) == 1) {
+
+				vertice_valido = true;
+
+			}
+
+			if (!visitados[iterador] && vertice_valido) {
+				cout << iterador+1 << ", ";
 				visitados[iterador] = true;
 				fila.push(iterador);
 			}

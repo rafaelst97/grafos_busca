@@ -97,9 +97,21 @@ int main()
                 vertice_partida--;
             } while (vertice_partida >= vertices);
 
-            dfs(matriz, visitados, vertice_partida, vertices);
+            dfs(matriz, visitados, vertice_partida);
 
             break;
+
+        case 4:
+
+            system("cls");
+
+            cout << "Qual será o vértice de partida?" << endl;
+            do {
+                cin >> vertice_partida;
+                vertice_partida--;
+            } while (vertice_partida >= vertices);
+
+            bfs(matriz, visitados, vertice_partida);
 
         case 0:
 
