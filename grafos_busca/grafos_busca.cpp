@@ -94,9 +94,10 @@ int main()
             cout << "Qual será o vértice de partida?" << endl;
             do {
                 cin >> vertice_partida;
+                vertice_partida--;
             } while (vertice_partida >= vertices);
 
-            dfs(matriz, visitados, vertice_partida);
+            dfs(matriz, visitados, vertice_partida, vertices);
 
             break;
 
