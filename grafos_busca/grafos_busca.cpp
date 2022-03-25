@@ -33,6 +33,7 @@ int main()
 
         int vertice1 = 0;
         int vertice2 = 0;
+        int vertice_partida = 0;
 
         system("cls");
 
@@ -50,16 +51,18 @@ int main()
 
             system("cls");
 
-            cout << "Escolha um vértice entre 0 e " << vertices-1 << endl;
+            cout << "Escolha um vértice entre 1 e " << vertices << endl;
             do {
                 cin >> vertice1;
+                vertice1--;
             } while (vertice1 >= vertices);
 
             system("cls");
 
-            cout << "O vértice " << vertice1 << " será ligado à qual vértice? (Este vértice deve ser menor que " << vertices-1 << ")" << endl;
+            cout << "O vértice " << vertice1+1 << " será ligado à qual vértice? (Este vértice deve ser menor que " << vertices << ")" << endl;
             do {
                 cin >> vertice2;
+                vertice2--;
             } while (vertice2 >= vertices);
 
             system("cls");
@@ -81,6 +84,21 @@ int main()
             }
 
             system("pause");
+
+            break;
+
+        case 3:
+
+            system("cls");
+
+            cout << "Qual será o vértice de partida?" << endl;
+            do {
+                cin >> vertice_partida;
+            } while (vertice_partida >= vertices);
+
+            dfs(matriz, visitados, vertice_partida);
+
+            break;
 
         case 0:
 
