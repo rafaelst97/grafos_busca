@@ -36,6 +36,15 @@ void adicionar_aresta(vector<vector<int>> &matriz, int vertice1, int vertice2) {
 
 }
 
+void excluir_aresta(vector<vector<int>>& matriz, int vertice1, int vertice2) {
+
+	int v1 = vertice1 - 1;
+	int v2 = vertice2 - 1;
+
+	matriz[vertice1].at(vertice2) = 0;
+
+}
+
 void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida) {
 
 	stack<int> pilha;

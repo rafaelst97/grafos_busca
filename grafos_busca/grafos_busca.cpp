@@ -42,6 +42,7 @@ int main()
         cout << "(2) Exibir matriz" << endl;
         cout << "(3) Fazer busca DFS" << endl;
         cout << "(4) Fazer busca BFS" << endl;
+        cout << "(5) Excluir aresta" << endl;
         cout << "(0) Sair do programa" << endl;
         cin >> opcao_menu;
 
@@ -112,6 +113,33 @@ int main()
             } while (vertice_partida >= vertices);
 
             bfs(matriz, visitados, vertice_partida);
+
+            break;
+
+        case 5:
+
+            system("cls");
+
+            cout << "Escolha um vértice entre 1 e " << vertices << endl;
+            do {
+                cin >> vertice1;
+                vertice1--;
+            } while (vertice1 >= vertices);
+
+            system("cls");
+
+            cout << "O vértice " << vertice1 + 1 << " será desligado de qual vértice? (Este vértice deve ser menor que " << vertices << ")" << endl;
+            do {
+                cin >> vertice2;
+                vertice2--;
+            } while (vertice2 >= vertices);
+
+            system("cls");
+
+
+            excluir_aresta(matriz, vertice1, vertice2);
+
+            break;
 
         case 0:
 
