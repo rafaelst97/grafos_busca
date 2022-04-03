@@ -65,11 +65,11 @@ void excluir_vertice(vector<vector<int>>& matriz, int vertice) {
 
 	for (auto& linha : matriz) {
 
-		linha.erase(linha.begin() + vertice);
+		linha.erase(linha.begin() + vertice_escolhido);
 
 	}
 
-	matriz.erase(matriz.begin() + vertice);
+	matriz.erase(matriz.begin() + vertice_escolhido);
 
 }
 
