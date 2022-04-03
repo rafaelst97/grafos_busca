@@ -142,6 +142,7 @@
     <ClCompile Include="grafos_busca.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="conectividade.h" />
     <ClInclude Include="matriz.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
