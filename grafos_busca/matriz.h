@@ -71,8 +71,6 @@ void excluir_vertice(vector<vector<int>>& matriz, int vertice) {
 
 	matriz.erase(matriz.begin() + vertice);
 
-	int teste = 1;
-
 }
 
 void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida) {
