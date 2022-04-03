@@ -160,6 +160,7 @@ int main()
             if (opcao == 1) {
                 adicionar_vertice(matriz);
                 cout << "Vértice adicionado" << endl;
+                vertices = matriz.size();
                 system("pause");
             }
 
@@ -175,7 +176,7 @@ int main()
             } while (opcao > matriz.size());
 
             excluir_vertice(matriz, opcao);
-
+            vertices = matriz.size();
             system("cls");
 
             break;
