@@ -156,11 +156,11 @@ int main()
 
             system("cls");
 
-            adicionar_vertice(matriz);
-
-            cout << "Vértice adicionado" << endl;
-
-            system("pause");
+            if (confirmacao == 1) {
+                adicionar_vertice(matriz);
+                cout << "Vértice adicionado" << endl;
+                system("pause");
+            }
 
             break;
 
