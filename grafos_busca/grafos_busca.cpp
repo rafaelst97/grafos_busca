@@ -34,6 +34,7 @@ int main()
         int vertice1 = 0;
         int vertice2 = 0;
         int vertice_partida = 0;
+        int confirmacao = 0;
 
         system("cls");
 
@@ -143,8 +144,6 @@ int main()
             break;
 
         case 6:
-
-            int confirmacao = 0;
 
             system("cls");
 
