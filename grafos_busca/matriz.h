@@ -61,6 +61,17 @@ void adicionar_vertice(vector<vector<int>>& matriz) {
 
 void excluir_vertice(vector<vector<int>>& matriz, int vertice) {
 
+	int vertice_escolhido = vertice - 1;
+
+	for (auto& linha : matriz) {
+
+		linha.erase(linha.begin() + vertice);
+
+	}
+
+	matriz.erase(matriz.begin() + vertice);
+
+	int teste = 1;
 
 }
 

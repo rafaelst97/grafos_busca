@@ -174,7 +174,7 @@ int main()
                 cin >> opcao;
             } while (opcao > matriz.size());
 
-            //Função de excluir vértice;
+            excluir_vertice(matriz, opcao);
 
             system("cls");
 
