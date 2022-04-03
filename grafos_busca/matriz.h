@@ -54,6 +54,7 @@ void adicionar_vertice(vector<vector<int>>& matriz) {
 
 	for (auto& linha : matriz) {
 
+		linha.push_back(0);
 
 	}
 }
