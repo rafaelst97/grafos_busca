@@ -45,6 +45,19 @@ void excluir_aresta(vector<vector<int>>& matriz, int vertice1, int vertice2) {
 
 }
 
+void adicionar_vertice(vector<vector<int>>& matriz) {
+
+	vector<int> novo_vertice;
+	novo_vertice.assign(matriz.size(), (matriz.size(), 0));
+
+	matriz.push_back(novo_vertice);
+
+	for (auto& linha : matriz) {
+
+
+	}
+}
+
 void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida) {
 
 	stack<int> pilha;

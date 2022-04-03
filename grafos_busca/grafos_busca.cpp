@@ -43,6 +43,7 @@ int main()
         cout << "(3) Fazer busca DFS" << endl;
         cout << "(4) Fazer busca BFS" << endl;
         cout << "(5) Excluir aresta" << endl;
+        cout << "(6) Adicionar novo vértice" << endl;
         cout << "(0) Sair do programa" << endl;
         cin >> opcao_menu;
 
@@ -138,6 +139,29 @@ int main()
 
 
             excluir_aresta(matriz, vertice1, vertice2);
+
+            break;
+
+        case 6:
+
+            int confirmacao = 0;
+
+            system("cls");
+
+            cout << "Deseja realmente adicionar um novo vértice?" << endl;
+            cout << "(1) Sim" << endl;
+            cout << "(2) Não" << endl;
+            do {
+                cin >> confirmacao;
+            } while (confirmacao > 1);
+
+            system("cls");
+
+            adicionar_vertice(matriz);
+
+            cout << "Vértice adicionado" << endl;
+
+            system("pause");
 
             break;
 
