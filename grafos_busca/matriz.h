@@ -59,6 +59,11 @@ void adicionar_vertice(vector<vector<int>>& matriz) {
 	}
 }
 
+void excluir_vertice(vector<vector<int>>& matriz, int vertice) {
+
+
+}
+
 void dfs(vector<vector<int>>matriz, vector<bool>&visitados, int vertice_partida) {
 
 	stack<int> pilha;

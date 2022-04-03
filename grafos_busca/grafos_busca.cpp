@@ -34,7 +34,7 @@ int main()
         int vertice1 = 0;
         int vertice2 = 0;
         int vertice_partida = 0;
-        int confirmacao = 0;
+        int opcao = 0;
 
         system("cls");
 
@@ -45,6 +45,7 @@ int main()
         cout << "(4) Fazer busca BFS" << endl;
         cout << "(5) Excluir aresta" << endl;
         cout << "(6) Adicionar novo vértice" << endl;
+        cout << "(7) Excluir vértice" << endl;
         cout << "(0) Sair do programa" << endl;
         cin >> opcao_menu;
 
@@ -151,16 +152,31 @@ int main()
             cout << "(1) Sim" << endl;
             cout << "(2) Não" << endl;
             do {
-                cin >> confirmacao;
-            } while (confirmacao > 1);
+                cin >> opcao;
+            } while (opcao > 1);
 
             system("cls");
 
-            if (confirmacao == 1) {
+            if (opcao == 1) {
                 adicionar_vertice(matriz);
                 cout << "Vértice adicionado" << endl;
                 system("pause");
             }
+
+            break;
+
+        case 7:
+
+            system("cls");
+
+            cout << "Qual vértice deseja excluir?" << endl;
+            do {
+                cin >> opcao;
+            } while (opcao > matriz.size());
+
+            //Função de excluir vértice;
+
+            system("cls");
 
             break;
 
